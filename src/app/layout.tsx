@@ -5,6 +5,9 @@ import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// TODO: prevent page reloading (?)
+// TODO: trova un modo per mantenere salvato lo stato (cookie o altro (?))
+
 export const metadata: Metadata = {
   title: "Email Editor",
   description: "Home landing page of the free and open-source visual and code editor for emails using React Email",
