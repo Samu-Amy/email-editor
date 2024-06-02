@@ -20,19 +20,19 @@ export const EmailBase = () => {
 // Component for preview
 export const EmailContent = () => {
     return (
-        <Container className="shadow-md rounded-md">
+        <Container className="shadow-md rounded-md p-4">
             <Section className="m-4">
                 <Heading className="font-bold text-lg">Test email</Heading>
                 <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, maiores!</Text>
             </Section>
-            <Row>
-                <Column>
+            <Row className="m-4">
+                <Column className="text-center">
                     <Text>A</Text>
                 </Column>
-                <Column>
+                <Column className="text-center">
                     <Text>B</Text>
                 </Column>
-                <Column>
+                <Column className="text-center">
                     <Text>C</Text>
                 </Column>
             </Row>

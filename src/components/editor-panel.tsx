@@ -1,3 +1,6 @@
+"use client"
+
+import { renderHtml, renderText } from "@/lib/email-renderer";
 import { Button } from "./ui/button";
 
 export const EditorPanel = () => {
@@ -12,7 +15,13 @@ export const EditorPanel = () => {
                         <Button variant="dark" size="xs">Load</Button>
                     </li>
                 </ul>
-                <Button variant="dark" size="xs">Export</Button>
+                <Button variant="dark" size="xs" onClick={() => {
+                    const html = renderHtml();
+                    const text = renderText();
+                    console.log(html);
+                    console.log(" ---- ---- ---- ---- ---- ---- ---- ---- ---- ");
+                    console.log(text);
+                }}>Export</Button>
             </div>
             <div className="pt-2">
 
