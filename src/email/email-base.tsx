@@ -20,7 +20,7 @@ export const EmailBase = () => {
 // Component for preview
 export const EmailContent = () => {
     return (
-        <Container className="shadow-md rounded-md p-4">
+        <Container className="w-full shadow-md rounded-md p-4">
             <Section className="m-4">
                 <Heading className="font-bold text-lg">Test email</Heading>
                 <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, maiores!</Text>
