@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Email Editor",
-  description: "Home landing page of the free and open-source visual block editor for emails using MJML",
+  description: "Home landing page of the free and open-source visual block editor for emails",
 };
 
 export default function RootLayout({
