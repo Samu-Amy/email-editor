@@ -1,9 +1,16 @@
 "use client"
 
-import { renderHtml, renderText } from "@/lib/email-renderer";
+// import { renderHtml, renderText } from "@/lib/email-renderer";
+import { saveAs } from 'file-saver';
 import { Button } from "./ui/button";
+import { renderEmail } from "./email/renderer";
 
 export const EditorPanel = () => {
+    const downloadHtmlFile = () => {
+        const blob = new Blob([renderEmail("Questa è una mail di prova")], { type: 'text/html;charset=utf-8' });
+        saveAs(blob, 'email.html');
+    }
+    
     return (
         <div className="w-96 h-full p-6 bg-zinc-900 text-zinc-100 flex flex-col items-center">
             <div className="w-full pb-2 flex justify-between border-b border-zinc-600">
@@ -16,11 +23,7 @@ export const EditorPanel = () => {
                     </li>
                 </ul>
                 <Button variant="dark" size="xs" onClick={() => {
-                    const html = renderHtml();
-                    const text = renderText();
-                    console.log(html);
-                    console.log(" ---- ---- ---- ---- ---- ---- ---- ---- ---- ");
-                    console.log(text);
+                    downloadHtmlFile();
                 }}>Export</Button>
             </div>
             <div className="pt-2">
